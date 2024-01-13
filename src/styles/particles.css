@@ -1,0 +1,9 @@
+#tsparticles {
+  height: 800px;
+  position: fixed;
+  left: 700px;
+  top: 200px;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
