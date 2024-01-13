@@ -1,4 +1,5 @@
 import { skills } from "@/data/skills";
+import Image from "next/image";
 
 function Skills() {
   return (
@@ -17,9 +18,9 @@ function Skills() {
       {/* Skills List */}
       <ul className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto text-lg">
         {skills.map((skill) => (
-          <li className="bg-gray-800 border-black/[0.1] rounded-xl px-5 py-3 flex flex-row items-center gap-1 justify-center">
+          <li key={skill.name} className="bg-gray-800 border-black/[0.1] rounded-xl px-5 py-3 flex flex-row items-center gap-1 justify-center">
             {typeof skill.image === "string" ? (
-              <img height={24} src={skill.image} alt={`${skill.name} icon`} />
+              <Image height={24} src={skill.image} alt={`${skill.name} icon`} />
             ) : (
               // @ts-ignore
               <skill.image />

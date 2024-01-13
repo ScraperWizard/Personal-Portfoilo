@@ -16,15 +16,10 @@ export const contacts: contact[] = [
     icon: DiGithubBadge,
   },
   {
-    name: "Github",
+    name: "Youtube",
     link: "https://github.com/ScraperWizard",
     icon: RiYoutubeLine,
-  },
-  {
-    name: "Github",
-    link: "https://github.com/ScraperWizard",
-    icon: DiGithubBadge,
-  },
+  }
 ];
 
 export const emailContact: contact = {

@@ -9,6 +9,7 @@ import { BiDownload } from "react-icons/bi";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import { IconType } from "react-icons";
 import Footer from "./Footer";
 
 export default function Home() {
@@ -24,13 +25,16 @@ export default function Home() {
           </div>
 
           <div className="social-media flex space-x-4">
-            {contacts?.map((contact) => (
-              <div className="social-media-icon">
-                <Link href={contact.link} target="_blank">
-                  <contact.icon className="text-2xl" />
-                </Link>
-              </div>
-            ))}
+            {contacts?.map((contact) => {
+              const IconComponent: IconType | undefined = contact.icon;
+              return IconComponent ? (
+                <div key={contact.name} className="social-media-icon">
+                  <Link href={contact.link} target="_blank">
+                    <IconComponent />
+                  </Link>
+                </div>
+              ) : null;
+            })}
           </div>
         </div>
       </section>
@@ -79,7 +83,7 @@ export default function Home() {
           <ParticlesContainer />
         </div>
       </section>
-        
+
       {/* Skills */}
       <Skills />
 
