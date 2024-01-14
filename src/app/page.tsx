@@ -11,6 +11,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import { IconType } from "react-icons";
 import Footer from "./Footer";
+import Aboutme from "./Aboutme";
 
 export default function Home() {
   return (
@@ -83,6 +84,9 @@ export default function Home() {
           <ParticlesContainer />
         </div>
       </section>
+
+      {/* About me */}
+      <Aboutme />
 
       {/* Skills */}
       <Skills />

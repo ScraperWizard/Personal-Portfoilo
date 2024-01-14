@@ -2,6 +2,9 @@
 import { RiYoutubeLine } from "react-icons/ri";
 import { IconType } from "react-icons";
 import { DiGithubBadge } from "react-icons/di";
+import { TbBrandFiverr } from "react-icons/tb";
+import { BsLinkedin } from "react-icons/bs";
+import { SiUpwork } from "react-icons/si";
 
 type contact = {
   name: string;
@@ -16,10 +19,20 @@ export const contacts: contact[] = [
     icon: DiGithubBadge,
   },
   {
-    name: "Youtube",
-    link: "https://github.com/ScraperWizard",
-    icon: RiYoutubeLine,
-  }
+    name:"Fiverr",
+    link: "https://www.fiverr.com/beaks78?up_rollout=true",
+    icon: TbBrandFiverr,
+  },
+  {
+    name:"LinkedIn",
+    link: "https://www.linkedin.com/in/abdulrahman-alali-11897727b/",
+    icon: BsLinkedin,
+  },
+  {
+    name:"Upwork",
+    link: "https://www.upwork.com/freelancers/~01d2a9f4d3f3d6b5e5",
+    icon: SiUpwork,
+  },
 ];
 
 export const emailContact: contact = {
