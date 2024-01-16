@@ -44,8 +44,8 @@ export default function Home() {
         <div className="flex items-center h-screen ml-72 -translate-y-50 z-30">
           <div className="body-text text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto z-20">
             <h1 className="h1 text-5xl font-bold mb-4 leading-relaxed select-none">
-              Crafting Digital Experiences <br /> With{" "}
-              <span className="text-blue-500">Web Development</span>
+              Full-Stack <br />{" "}
+              <span className="text-blue-500">Web Developer</span>
             </h1>
             <p className="profile-description max-w-2xl xl:max-w-sl mx-auto xl:mx-0 mb-10 xl:mb-16 text-sm font-light select-none">
               I am a dedicated full-stack developer, my focus is on creating
@@ -56,17 +56,15 @@ export default function Home() {
               <a
                 href={"/CV.pdf"}
                 download
-                className="group relative overflow-hidden px-4 py-2 text-blue-500 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 flex items-center"
               >
-                <span className="absolute inset-0 bg-blue-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-200"></span>
-                <span className="relative group-hover:text-white mr-2">
-                  Resume
-                </span>
-                <BiDownload className="relative group-hover:text-white" />
+                <div className="bg-blue-500 rounded px-4 py-2 flex items-center">
+                  <span className="relative text-white mr-2">Resume</span>
+                  <BiDownload className="relative text-white" />
+                </div>
               </a>
-              <button className="group relative overflow-hidden px-4 py-2 text-blue-500 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                <span className="absolute inset-0 bg-blue-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-200"></span>
-                <span className="relative group-hover:text-white">
+              <button className="group relative overflow-hidden px-4 py-2 text-blue-500 rounded">
+                <span className="absolute bg-blue-500 transform"></span>
+                <span className="relative bg-blue-500 text-white rounded px-4 py-2">
                   {"See all projects ->"}
                 </span>
               </button>
@@ -85,19 +83,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About me */}
       <Aboutme />
-
-      {/* Skills */}
       <Skills />
-
-      {/* projects */}
       <Projects />
-
-      {/* contact */}
       <Contact />
-
-      {/* footer */}
       <Footer />
     </main>
   );
