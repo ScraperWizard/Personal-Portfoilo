@@ -3,11 +3,23 @@ import React, { useState } from "react";
 import HeaderText from "@/components/HeaderText";
 import { emailContact } from "@/data/contacts";
 import { FaPaperPlane } from "react-icons/fa";
-import { POST } from "./api/send/route";
+import { FormEvent } from 'react'
 
 export default function Contact() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const response = await fetch("/api/mail", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: event.currentTarget.email.value,
+        message: event.currentTarget.message.value,
+      }),
+    });
+  }
 
   return (
     <section
@@ -24,28 +36,18 @@ export default function Contact() {
         &nbsp;or through this form.
       </div>
 
-      <form
-        className="mt-10 flex flex-col w-[40%]"
-        action={() => {
-          POST(
-            JSON.stringify({
-              email,
-              message,
-            })
-          );
-        }}
-      >
+      <form className="mt-10 flex flex-col w-[40%]" onSubmit={onSubmit}>
         <input
           placeholder="Your email"
           type="email"
+          name="email"
           autoComplete="off"
           className="h-14 rounded-lg text-black"
-          onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Your message"
+          name="message"
           className="h-53 my-3 border-black rounded-lg p-4 text-black"
-          onChange={(e) => setMessage(e.target.value)}
           autoComplete="off"
           maxLength={500}
         />
