@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import HeaderText from "@/components/HeaderText";
 import { emailContact } from "@/data/contacts";
 import { FaPaperPlane } from "react-icons/fa";
+import { POST } from "./api/send/route";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -23,26 +24,37 @@ export default function Contact() {
         &nbsp;or through this form.
       </div>
 
-      <form className="mt-10 flex flex-col w-[40%]">
+      <form
+        className="mt-10 flex flex-col w-[40%]"
+        action={() => {
+          POST(
+            JSON.stringify({
+              email,
+              message,
+            })
+          );
+        }}
+      >
         <input
           placeholder="Your email"
           type="email"
           autoComplete="off"
-          className="h-14 rounded-lg border-black"
+          className="h-14 rounded-lg text-black"
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Your message"
-          className="h-53 my-3 border-black rounded-lg p-4 focus:border-black"
+          className="h-53 my-3 border-black rounded-lg p-4 text-black"
           onChange={(e) => setMessage(e.target.value)}
           autoComplete="off"
           maxLength={500}
         />
         <button
           type="submit"
-          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
+          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 rounded-full outline-none"
         >
-          Submit <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group:hover:-translate-y-1" />
+          Submit{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group:hover:-translate-y-1" />
         </button>
       </form>
     </section>

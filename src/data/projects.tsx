@@ -39,5 +39,18 @@ export const projects: Project[] = [
       "Discord.js",
       // "Antidetect Browsers",
     ]
+  },
+  {
+    name: "UpShow",
+    description: "A web application that automates process of buying/selling tickets on TicketMaster.",
+    image: ProfilePicture,
+    link: "www.upshow.xyz",
+    tech: [
+      "React",
+      "Typescript",
+      "Node.js",
+      "MongoDB",
+      "Antidetect Browsers",
+    ]
   }
 ];
