@@ -3,7 +3,6 @@ import { EmailTemplate } from "../../../components/EmailStructure";
 import { Resend } from "resend";
 import * as React from "react";
 import { emailContact } from "@/data/contacts";
-import type { NextApiRequest, NextApiResponse } from "next";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

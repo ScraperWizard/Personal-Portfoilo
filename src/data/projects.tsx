@@ -1,11 +1,12 @@
 import { skill, getSkills } from "./skills";
 import ProfilePicture from "@/public/Abdulrahman_Photo.png";
 import { StaticImageData } from "next/image";
+import TankSyncDashboard from "@/public/TankSyncDashboard.png";
 
 export type Project = {
   name: string; // Name of project
   description: string; // Description of project
-  image: StaticImageData; // Image path (Prview of project)
+  image: StaticImageData | string; // Image path (Prview of project)
   link: string; // Link to project
   tech: (string | undefined)[]; // skills used in project
 };
@@ -15,7 +16,7 @@ export const projects: Project[] = [
     name: "TankSync",
     description:
       "An electon-based desktop application that allows users to sync their accounts using an antidetect browser.",
-    image: ProfilePicture,
+    image: TankSyncDashboard,
     link: "www.tanksync.xyz",
     tech: [
       "Electron",
@@ -29,7 +30,7 @@ export const projects: Project[] = [
   {
     name: "PrimoPayments",
     description: "A payment gateway for the PrimoBot discord bot. Generate, track, remind payment links.",
-    image: ProfilePicture,
+    image: "",
     link: "www.primopayments.xyz",
     tech: [
       "Cron Jobs",
@@ -37,13 +38,12 @@ export const projects: Project[] = [
       "Stripe",
       "MongoDB",
       "Discord.js",
-      // "Antidetect Browsers",
     ]
   },
   {
     name: "UpShow",
     description: "A web application that automates process of buying/selling tickets on TicketMaster.",
-    image: ProfilePicture,
+    image: "",
     link: "www.upshow.xyz",
     tech: [
       "React",

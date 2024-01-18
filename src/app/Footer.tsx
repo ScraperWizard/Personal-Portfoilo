@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="text-center text-gray-400 text-sm py-4 mt-10">
-      <div>Built using Next and TilWind. Powered by vercel © {year} All rights reserved</div>
+      <div>Built using Next and TailWind. Powered by vercel © {year} All rights reserved</div>
     </footer>
   )
 }

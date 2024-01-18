@@ -28,7 +28,7 @@ export default function Contact() {
     >
       <HeaderText text="Contact Me" />
 
-      <div className="w-full flex items-center justify-center text-center">
+      <div className="w-full hidden lg:block lg:mb-10 items-center justify-center text-center">
         Contact me directly at&nbsp;
         <a className="underline" href={`mailto:${emailContact.link}`}>
           {emailContact.link}
@@ -36,7 +36,7 @@ export default function Contact() {
         &nbsp;or through this form.
       </div>
 
-      <form className="mt-10 flex flex-col w-[40%]" onSubmit={onSubmit}>
+      <form className="flex flex-col w-full px-4 max-w-[44rem]" onSubmit={onSubmit}>
         <input
           placeholder="Your email"
           type="email"

@@ -11,9 +11,6 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
-    "@tsparticles/engine": "^3.0.3",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.0.3",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

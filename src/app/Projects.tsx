@@ -36,10 +36,10 @@ function Project(props: Project) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-black mb-28 scroll-mt-28 sm:mb-40">
+    <section id="projects" className="bg-black scroll-mt-28">
       <HeaderText text="Cool projects" />
 
-      <div id="projects-holder" className="flex items-center justify-center text-center w-full flex-col">
+      <div id="projects-holder" className="flex items-center mx-4 justify-center text-center flex-col mb-[4.5rem]">
         {projects.map((project) => {
           return <Project key={project.name} {...project} />;
         })}

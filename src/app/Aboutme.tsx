@@ -6,8 +6,8 @@ export default function Aboutme() {
   return (
     <>
       <HeaderText text="About Me" />
-      <div className="text-center flex justify-center items-center">
-        <p className="text-wrap w-[44rem]">
+      <div className="text-center flex justify-center items-center mb-[4.5rem]">
+        <p className="text-wrap w-[22rem] lg:w-[44rem]">
           Currently studying at The British University In Dubai, I love reverse
           engineering, web scraping, and any form of automation of web tasks
           (aka finding exploits hehe). Lately have been working on building
@@ -17,13 +17,13 @@ export default function Aboutme() {
       </div>
       <div
         id="statsContainer"
-        className="flex justify-center items-center mt-4 mb-4"
+        className="flex justify-center items-center mb-[4.5rem]"
       >
-        <ul id="statisticsAboutMe" className="flex flex-row">
+        <div id="statisticsAboutMe" className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-between">
           {experience
             ? experience.map((exp, index) => (
-                <li key={exp.label}>
-                  <div className={`ml-8 w-[8rem] ${index !== experience.length - 1 ? "border-r border-white border-opacity-50": ""}`}>
+                <li key={exp.label} className="sm:w-1/2 lg:w-auto list-none">
+                  <div className={`lg:ml-20 w-[8rem] ${index !== experience.length - 1 ? "lg:border-r border-white border-opacity-50": ""}`}>
                     <p className="text-4xl font-bold color text-blue-500 text-accent">
                       {exp.number}+
                     </p>
@@ -35,7 +35,7 @@ export default function Aboutme() {
                 </li>
               ))
             : null}
-        </ul>
+        </div>
       </div>
     </>
   );
