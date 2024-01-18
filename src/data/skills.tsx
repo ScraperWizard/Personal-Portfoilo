@@ -16,7 +16,9 @@ export type skill = {
   image?: string | IconType;
 };
 
-{/* <SiMongodb width={} />; */}
+{
+  /* <SiMongodb width={} />; */
+}
 
 export const skills: skill[] = [
   {
@@ -72,3 +74,22 @@ export const skills: skill[] = [
 export const getSkills = (names: string[]): (skill | undefined)[] => {
   return names.map((name) => skills.find((skill) => skill.name === name));
 };
+
+export const experience = [
+  {
+    number: 3,
+    label: "Years of experience",
+  },
+  {
+    number: 30,
+    label: "Finished Projects"
+  },
+  {
+    number: 20,
+    label: "Satisfied clients"
+  },
+  {
+    number: 2,
+    label: "Winning Competitions"
+  }
+];
