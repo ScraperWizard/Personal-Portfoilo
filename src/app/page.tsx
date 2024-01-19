@@ -8,7 +8,7 @@ import Header from "./Header";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Header />
       <Hero />
       <Aboutme />

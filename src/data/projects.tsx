@@ -2,6 +2,8 @@ import { skill, getSkills } from "./skills";
 import ProfilePicture from "@/public/Abdulrahman_Photo.png";
 import { StaticImageData } from "next/image";
 import TankSyncDashboard from "@/public/TankSyncDashboard.png";
+import SuperClick from "@/public/SuperClick.png";
+import UpShow from "@/public/UpShow.png";
 
 export type Project = {
   name: string; // Name of project
@@ -28,22 +30,22 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "PrimoPayments",
-    description: "A payment gateway for the PrimoBot discord bot. Generate, track, remind payment links.",
-    image: "",
+    name: "SuperClick",
+    description: "SuperClick is an advanced bot system that interacts through a reverse engineered API.",
+    image: SuperClick,
     link: "www.primopayments.xyz",
     tech: [
-      "Cron Jobs",
-      "Paypal",
-      "Stripe",
+      "Reverse Engineer",
+      "WebSockets",
+      "Bot automation",
       "MongoDB",
-      "Discord.js",
+      "React.js",
     ]
   },
   {
     name: "UpShow",
     description: "A web application that automates process of buying/selling tickets on TicketMaster.",
-    image: "",
+    image: UpShow,
     link: "www.upshow.xyz",
     tech: [
       "React",
